@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane fx:id="root" prefHeight="400.0" prefWidth="450.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.dodawanieController">
+   <children>
+      <Label fx:id="idwyp" layoutX="117.0" layoutY="75.0" text="ID_WYP:">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label fx:id="idsam" layoutX="65.0" layoutY="110.0" text="SAMOCHÓD:">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label fx:id="idprac" layoutX="63.0" layoutY="145.0" text="PRACOWNIK:">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Button fx:id="dodawaniePrzycisk" layoutX="197.0" layoutY="356.0" mnemonicParsing="false" onAction="#dodaj" text="DODAJ">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <TextField fx:id="id" layoutX="229.0" layoutY="77.0" visible="false" />
+      <TextField fx:id="jeden" layoutX="229.0" layoutY="112.0" visible="false" />
+      <TextField fx:id="dwa" layoutX="229.0" layoutY="147.0" visible="false" />
+      <Label fx:id="idkli" layoutX="126.0" layoutY="180.0" text="KLIENT:">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label fx:id="datawyp" layoutX="80.0" layoutY="215.0" text="DATA_WYP:" visible="false">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label fx:id="datazwr" layoutX="80.0" layoutY="250.0" text="DATA_ZWR:" visible="false">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label fx:id="koszt" layoutX="131.0" layoutY="285.0" prefHeight="35.0" prefWidth="78.0" text="KOSZT:" visible="false">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <TextField fx:id="trzy" layoutX="229.0" layoutY="182.0" visible="false" />
+      <TextField fx:id="szesc" layoutX="229.0" layoutY="287.0" visible="false" />
+      <DatePicker fx:id="cztery" layoutX="229.0" layoutY="217.0" visible="false" />
+      <DatePicker fx:id="piec" layoutX="229.0" layoutY="252.0" visible="false" />
+      <TextField fx:id="czteryT" layoutX="229.0" layoutY="217.0" visible="false" />
+      <TextField fx:id="piecT" layoutX="229.0" layoutY="252.0" visible="false" />
+      <Label fx:id="idkli1" layoutX="134.0" layoutY="75.0" text="ID_KLI:" visible="false">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label fx:id="nazwisko" layoutX="78.0" layoutY="108.0" text="NAZWISKO:" visible="false">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label fx:id="imie" layoutX="152.0" layoutY="142.0" text="IMIE:" visible="false">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label fx:id="nrdowodu" layoutX="48.0" layoutY="177.0" prefHeight="35.0" prefWidth="158.0" text="NR_DOWODU:" visible="false">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label fx:id="miejscowosc" layoutX="37.0" layoutY="212.0" text="MIEJSCOWOSC:" visible="false">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label fx:id="ulica" layoutX="134.0" layoutY="247.0" prefHeight="35.0" prefWidth="70.0" text="ULICA:" visible="false">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="combobox" layoutX="143.0" layoutY="28.0" onAction="#change" prefHeight="31.0" prefWidth="173.0" promptText="Wybierz tabele" value="Wypożyczenia" />
+      <Label fx:id="kosztdnia" layoutX="63.0" layoutY="315.0" prefHeight="35.0" prefWidth="143.0" text="KOSZT_DNIA:" visible="false">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <TextField fx:id="siedem" layoutX="229.0" layoutY="320.0" visible="false" />
+      <Label fx:id="pojsil" layoutX="119.0" layoutY="282.0" prefHeight="35.0" prefWidth="88.0" text="POJ_SIL:" visible="false">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label fx:id="krajprod" layoutX="75.0" layoutY="247.0" prefHeight="35.0" prefWidth="132.0" text="KRAJ_PROD:" visible="false">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label fx:id="rokprod" layoutX="81.0" layoutY="212.0" prefHeight="35.0" prefWidth="126.0" text="ROK_PROD:" visible="false">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label fx:id="model" layoutX="119.0" layoutY="177.0" prefHeight="35.0" prefWidth="88.0" text="MODEL:" visible="false">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label fx:id="marka" layoutX="119.0" layoutY="142.0" prefHeight="35.0" prefWidth="88.0" text="MARKA:" visible="false">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label fx:id="nrrej" layoutX="122.0" layoutY="107.0" prefHeight="35.0" prefWidth="88.0" text="NR_REJ:" visible="false">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label fx:id="idsam1" layoutX="116.0" layoutY="72.0" prefHeight="35.0" prefWidth="89.0" text="ID_SAM:" visible="false">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label fx:id="idprac4" layoutX="108.0" layoutY="72.0" text="ID_PRAC:" visible="false">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label fx:id="telefon" layoutX="101.0" layoutY="177.0" text="TELEFON:" visible="false">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label fx:id="pesel" layoutX="135.0" layoutY="212.0" text="PESEL:" visible="false">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="combobox1" layoutX="229.0" layoutY="115.0" prefWidth="150.0" visible="false" />
+      <ComboBox fx:id="combobox2" layoutX="229.0" layoutY="150.0" prefWidth="150.0" visible="false" />
+      <ComboBox fx:id="combobox3" layoutX="229.0" layoutY="185.0" prefWidth="150.0" visible="false" />
+   </children>
+</AnchorPane>

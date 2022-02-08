@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="589.0" prefWidth="789.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.MainController">
+   <children>
+      <Button fx:id="Dodaj" layoutX="9.0" layoutY="537.0" mnemonicParsing="false" onAction="#dodawanie" text="Dodaj" />
+      <Button fx:id="Usun" layoutX="75.0" layoutY="537.0" mnemonicParsing="false" onAction="#usuwanie" text="Usuń" />
+      <Button fx:id="Szukaj" layoutX="641.0" layoutY="11.0" mnemonicParsing="false" onAction="#szukaj" prefHeight="31.0" prefWidth="82.0" text="Szukaj" />
+      <TabPane id="table-view" fx:id="TabPane" layoutY="53.0" prefHeight="462.0" prefWidth="875.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab fx:id="WYPOZYCZENIA" onSelectionChanged="#change1" text="Wypożyczenia">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="503.0" prefWidth="238.0">
+                     <children>
+                        <TableView fx:id="tableView" prefHeight="423.0" prefWidth="875.0">
+                          <columns>
+                            <TableColumn fx:id="ID_WYP" onEditCommit="#edit1wyp" prefWidth="75.0" text="ID_WYP" />
+                            <TableColumn fx:id="SAMOCHOD" onEditCommit="#edit1sam" prefWidth="88.0" text="SAMOCHÓD" />
+                              <TableColumn fx:id="PRACOWNIK" onEditCommit="#edit1prac" prefWidth="132.0" text="PRACOWNIK_NAZW" />
+                              <TableColumn fx:id="PRACOWNIKIMIE" onEditCommit="#edit1pracimie" prefWidth="129.0" text="PRACOWNIK_IMIE" />
+                              <TableColumn fx:id="KLIENT" onEditCommit="#edit1kli" prefWidth="94.0" text="KLIENT_NAZW" />
+                              <TableColumn fx:id="KLIENTIMIE" onEditCommit="#edit1kliimie" prefWidth="87.0" text="KLIENT_IMIE" />
+                              <TableColumn fx:id="DATA_WYP" onEditCommit="#edit1datawyp" prefWidth="71.0" text="DATA_WYP" />
+                              <TableColumn fx:id="DATA_ZWR" onEditCommit="#edit1datazwr" prefWidth="103.0" text="DATA_ZWR" />
+                              <TableColumn fx:id="KOSZT" onEditCommit="#edit1koszt" prefWidth="95.0" text="KOSZT" />
+                          </columns>
+                        </TableView>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab fx:id="KLIENCI" onSelectionChanged="#change2" text="Klienci">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="490.0" prefWidth="570.0">
+                     <children>
+                        <TableView fx:id="tableView1" prefHeight="423.0" prefWidth="875.0">
+                           <columns>
+                              <TableColumn fx:id="ID_KLI1" onEditCommit="#edit2kli" prefWidth="100.0" text="ID_KLI" />
+                              <TableColumn fx:id="NAZWISKO1" minWidth="0.0" onEditCommit="#edit2nazwisko" prefWidth="127.0" text="NAZWISKO" />
+                              <TableColumn fx:id="IMIE" onEditCommit="#edit2imie" prefWidth="109.0" text="IMIE" />
+                              <TableColumn fx:id="NR_DOWODU" onEditCommit="#edit2nrdowodu" prefWidth="170.0" text="NR_DOWODU" />
+                              <TableColumn fx:id="MIEJSCOWOSC" onEditCommit="#edit2miejscowosc" prefWidth="160.0" text="MIEJSCOWOSC" />
+                              <TableColumn fx:id="ULICA" onEditCommit="#edit2ulica" prefWidth="208.0" text="ULICA" />
+                           </columns>
+                        </TableView>
+                     </children></AnchorPane>
+            </content>
+          </Tab>
+            <Tab fx:id="SAMOCHODY" onSelectionChanged="#change3" text="Samochody">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="490.0" prefWidth="570.0">
+                     <children>
+                        <TableView fx:id="tableView2" prefHeight="423.0" prefWidth="875.0">
+                           <columns>
+                              <TableColumn fx:id="ID_SAM2" onEditCommit="#edit3sam" prefWidth="81.0" text="ID_SAM" />
+                              <TableColumn fx:id="NR_REJ" minWidth="0.0" onEditCommit="#edit3nrrej" prefWidth="107.0" text="NR_REJ" />
+                              <TableColumn fx:id="MARKA" onEditCommit="#edit3marka" prefWidth="112.0" text="MARKA" />
+                              <TableColumn fx:id="MODEL" onEditCommit="#edit3model" prefWidth="101.0" text="MODEL" />
+                              <TableColumn fx:id="ROK_PROD" onEditCommit="#edit3rokprod" prefWidth="115.0" text="ROK_PROD" />
+                              <TableColumn fx:id="KRAJ_PROD" onEditCommit="#edit3krajprod" prefWidth="122.0" text="KRAJ_PROD" />
+                              <TableColumn fx:id="POJ_SIL" onEditCommit="#edit3pojsil" prefWidth="98.0" text="POJ_SIL" />
+                              <TableColumn fx:id="KOSZT_DNIA" onEditCommit="#edit3kosztdnia" prefWidth="138.0" text="KOSZT_DNIA" />
+                           </columns>
+                        </TableView>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab fx:id="PRACOWNICY" onSelectionChanged="#change4" text="Pracownicy">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="490.0" prefWidth="570.0">
+                     <children>
+                        <TableView fx:id="tableView3" prefHeight="423.0" prefWidth="875.0">
+                           <columns>
+                              <TableColumn fx:id="ID_PRAC3" onEditCommit="#edit4prac" prefWidth="155.0" text="ID_PRAC" />
+                              <TableColumn fx:id="NAZWISKO3" minWidth="0.0" onEditCommit="#edit4nazwisko" prefWidth="242.0" text="NAZWISKO" />
+                              <TableColumn fx:id="IMIE3" minWidth="0.0" onEditCommit="#edit4imie" prefWidth="187.0" text="IMIE" />
+                              <TableColumn fx:id="TELEFON" onEditCommit="#edit4telefon" prefWidth="127.0" text="TELEFON" />
+                              <TableColumn fx:id="PESEL" onEditCommit="#edit4pesel" prefWidth="163.0" text="PESEL" />
+                           </columns>
+                        </TableView>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+      <CheckBox fx:id="editButton" layoutX="577.0" layoutY="525.0" mnemonicParsing="false" onAction="#edit" text="Edytowalne" />
+      <CheckBox fx:id="constraintButton" layoutX="577.0" layoutY="558.0" mnemonicParsing="false" onAction="#constraint" selected="true" text="Constraint" />
+      <TextField fx:id="textfieldSZ" layoutX="445.0" layoutY="11.0" onKeyPressed="#enter" prefHeight="31.0" prefWidth="173.0" />
+      <ComboBox fx:id="comboboxSZKOL" layoutX="247.0" layoutY="11.0" prefHeight="31.0" prefWidth="173.0" promptText="Wybierz kolumnę" />
+      <ComboBox fx:id="comboboxSZ" layoutX="32.0" layoutY="11.0" onAction="#tabeleSZ" prefHeight="31.0" prefWidth="173.0" promptText="Wybierz tabele" value="Wypożyczenia" />
+      <Button id="odswiez" fx:id="odswiez" layoutX="751.0" layoutY="11.0" mnemonicParsing="false" onAction="#odswiezanie" prefHeight="31.0" prefWidth="31.0" />
+      <Button fx:id="Szczegoly" layoutX="136.0" layoutY="537.0" mnemonicParsing="false" onAction="#szczegoly" text="Szczegóły" />
+   </children>
+</AnchorPane>
