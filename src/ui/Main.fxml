@@ -92,8 +92,8 @@
             </Tab>
         </tabs>
       </TabPane>
-      <CheckBox fx:id="editButton" layoutX="577.0" layoutY="525.0" mnemonicParsing="false" onAction="#edit" text="Edytowalne" />
-      <CheckBox fx:id="constraintButton" layoutX="577.0" layoutY="558.0" mnemonicParsing="false" onAction="#constraint" selected="true" text="Constraint" />
+      <CheckBox fx:id="editButton" layoutX="751.0" layoutY="527.0" mnemonicParsing="false" onAction="#edit" text="Edytowalne" />
+      <CheckBox fx:id="constraintButton" layoutX="751.0" layoutY="558.0" mnemonicParsing="false" onAction="#constraint" selected="true" text="Constraint" />
       <TextField fx:id="textfieldSZ" layoutX="445.0" layoutY="11.0" onKeyPressed="#enter" prefHeight="31.0" prefWidth="173.0" />
       <ComboBox fx:id="comboboxSZKOL" layoutX="247.0" layoutY="11.0" prefHeight="31.0" prefWidth="173.0" promptText="Wybierz kolumnę" />
       <ComboBox fx:id="comboboxSZ" layoutX="32.0" layoutY="11.0" onAction="#tabeleSZ" prefHeight="31.0" prefWidth="173.0" promptText="Wybierz tabele" value="Wypożyczenia" />

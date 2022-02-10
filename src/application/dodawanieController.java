@@ -168,12 +168,12 @@ public class dodawanieController {
 	public ObservableList<Prac> IDPRACFUNC() throws ClassNotFoundException, SQLException {
 		Statement stmt = zadania.DbAccess.DbAccess();
 
-		ResultSet rs = stmt.executeQuery("SELECT id_prac, nazwisko FROM pracownicy");
+		ResultSet rs = stmt.executeQuery("SELECT id_prac, nazwisko, imie FROM pracownicy");
 		
 		oblist2.clear();
 		
 		while(rs.next()) {
-			oblist2.add(new Prac(rs.getInt("id_prac"), rs.getString("nazwisko")));
+			oblist2.add(new Prac(rs.getInt("id_prac"), rs.getString("nazwisko"), rs.getString("imie")));
 		}
 		
 		return oblist2;
@@ -188,12 +188,12 @@ public class dodawanieController {
 	public ObservableList<Kli> IDKLIFUNC() throws ClassNotFoundException, SQLException {
 		Statement stmt = zadania.DbAccess.DbAccess();
 
-		ResultSet rs = stmt.executeQuery("SELECT id_kli, nazwisko FROM klienci");
+		ResultSet rs = stmt.executeQuery("SELECT id_kli, nazwisko, imie FROM klienci");
 		
 		oblist3.clear();
 		
 		while(rs.next()) {
-			oblist3.add(new Kli(rs.getInt("id_kli"), rs.getString("nazwisko")));
+			oblist3.add(new Kli(rs.getInt("id_kli"), rs.getString("nazwisko"),  rs.getString("imie")));
 		}
 		
 		return oblist3;

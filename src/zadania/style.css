@@ -5,15 +5,6 @@
     -fx-background-position: center center;
 }
 
-.text-input:error {
-    -fx-text-fill: white;
-    -fx-border-insets: 0;
-    -fx-border-width: 2px;
-    -fx-border-color: red;
-    -fx-border-style: hidden hidden solid hidden;
-    -fx-background-color: derive(red, 99%);
-}
-
 .table-view *.scroll-bar:horizontal *.increment-button,
 .table-view *.scroll-bar:horizontal *.decrement-button {
   -fx-background-color: null;
